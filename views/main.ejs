@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>武汉中科科创工程检测有限公司</title>
+    <link rel='stylesheet' href='/stylesheets/main.css' />
+  </head>
+  <body>
+    <div class="container">        
+        <div class="header">
+            <div class="head-left">
+                武汉中科科创工程检测有限公司
+            </div>
+            <div class="head-right">
+                <ul>
+                    <li class="person-nav">
+                        张三
+                        <ul class="hover-nav">
+                            <li><a href="/member/edit" onclick="document.location='/member/edit'">个人信息</a></li>
+                            <li><a href="/user/change_password" onclick="document.location='/user/change_password'">修改密码</a></li>
+                            <li><a href="/" onclick="document.location='/'">退出登录</a></li>
+                        </ul>
+                    </li>
+                    <li id="now"></li>
+                </ul>          
+            </div>
+        </div>
+
+        <div class="left">
+            <div class="nav-list active">
+                <!--active标记展开-->
+                <div class="header">
+                    <span>工程管理</span>
+                </div>
+                <ul>
+                    <li><a href="/project/view">浏览工程</a></li>
+                    <li><a href="/project/add">添加工程</a></li>
+                    <li><a href="/project/verify">工程审核</a></li>
+                </ul>
+            </div>
+            <div class="nav-list active">
+                <div class="header">
+                    <span>设备管理</span>
+                </div>
+                <ul>
+                    <li><a href="/equipment/view">设备浏览</a></li>
+                    <li><a href="/equipment/revert">设备归还</a></li>
+                    <li><a href="/equipment/info">设备资料</a></li>
+                    <li><a href="/equipment/verify">设备审核</a></li>
+                </ul>
+            </div>
+            <div class="nav-list active">
+                <div class="header">
+                    <span>人员管理</span>
+                </div>
+                <ul>
+                    <li><a href="/member/view">人员浏览</a></li>
+                    <li><a href="/member/edit">编辑档案</a></li>
+                    <li><a href="/member/address">通讯录</a></li>
+                </ul>
+            </div>
+            <div class="nav-list active">
+                <div class="header">
+                    <span>公告公文管理</span>
+                </div>
+                <ul>
+                    <li><a href="/announcement/view">浏览公告</a></li>
+                    <li><a href="/announcement/publish">发布公告</a></li>
+                    <li><a href="/announcement/document">公文管理</a></li>
+                </ul>
+            </div>
+            <div class="nav-list active">
+                <div class="header">
+                    <span>用户管理</span>
+                </div>
+                <ul>
+                    <li><a href="/user/permission">人员权限管理</a></li>
+                    <li><a href="/user/staff">员工信息管理</a></li>
+                    <li><a href="/user/reset_password">员工密码管理</a></li>
+                    <li><a href="/user/change_password">个人密码管理</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="main">
+                <% if(include == 'common/apply') { %>
+                    <% include include/common/apply.html %>
+
+                <% } else if (include == 'project/view') { %>
+                    <% include include/project/view.html %>
+                <% } else if (include == 'project/add') { %>
+                    <% include include/project/add.html %>
+                <% } else if (include == 'project/edit') { %>
+                    <% include include/project/edit.html %>
+                <% } else if (include == 'project/detail') { %>
+                    <% include include/project/detail.html %>
+                <% } else if (include == 'project/apply') { %>
+                    <% include include/project/apply.html %>
+                <% } else if (include == 'project/verify') { %>
+                    <% include include/project/verify.html %>
+
+                <% } else if (include == 'equipment/view') { %>
+                    <% include include/equipment/view.html %>
+                <% } else if (include == 'equipment/use') { %>
+                    <% include include/equipment/use.html %>
+                <% } else if (include == 'equipment/revert') { %>
+                    <% include include/equipment/revert.html %>
+                <% } else if (include == 'equipment/info') { %>
+                    <% include include/equipment/info.html %>
+                <% } else if (include == 'equipment/maintenance') { %>
+                    <% include include/equipment/maintenance.html %>
+                <% } else if (include == 'equipment/edit') { %>
+                    <% include include/equipment/edit.html %>
+                <% } else if (include == 'equipment/apply') { %>
+                    <% include include/equipment/apply.html %>
+                <% } else if (include == 'equipment/verify') { %>
+                    <% include include/equipment/verify.html %>
+                    
+                <% } else if (include == 'member/view') { %>
+                    <% include include/member/view.html %>
+                <% } else if (include == 'member/edit') { %>
+                    <% include include/member/edit.html %>
+                <% } else if (include == 'member/address') { %>
+                    <% include include/member/address.html %>
+                    
+                <% } else if (include == 'user/permission') { %>
+                    <% include include/user/permission.html %>
+                <% } else if (include == 'user/staff') { %>
+                    <% include include/user/staff.html %>
+                <% } else if (include == 'user/add_staff') { %>
+                    <% include include/user/add_staff.html %>
+                <% } else if (include == 'user/change_password') { %>
+                    <% include include/user/change_password.html %>
+                <% } else if (include == 'user/reset_password') { %>
+                    <% include include/user/reset_password.html %>
+                    
+                <% } else if (include == 'announcement/publish') { %>
+                    <% include include/announcement/publish.html %>
+                <% } else if (include == 'announcement/detail') { %>
+                    <% include include/announcement/detail.html %>
+                <% } else if (include == 'announcement/document') { %>
+                    <% include include/announcement/document.html %>
+                <% } else if (include == 'announcement/view') { %>
+                    <% include include/announcement/view.html %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // 左侧导航位置
+        // var left = document.querySelector('.left')
+        // var cookie = document.cookie
+        // console.log(cookie)
+        // if(cookie.includes(';')){
+        //     var leftScrollTopCookie = cookie.slice(cookie.indexOf('leftScrollTop=')+14, cookie.indexOf(';', cookie.indexOf('leftScrollTop')))
+        // }else{
+        //     var leftScrollTopCookie = cookie.slice(cookie.indexOf('leftScrollTop')+14)
+        // }
+        // console.log(leftScrollTopCookie)
+        // left.scrollTop = leftScrollTopCookie
+        // left.onmousewheel = function(){
+        //     var leftScrollTop = left.scrollTop
+        //     document.cookie = 'leftScrollTop='+leftScrollTop+'; domain=localhost; path=/'
+        //     console.log(leftScrollTop)
+        //     console.log(cookie)
+        // }
+
+        // 显示时间
+        function showTime() {
+            var time = new Date()
+            var year = time.getFullYear()
+            var mounth = time.getMonth()
+            var date = time.getDate()
+            var day = time.getDay()
+            var hours = time.getHours()
+            var minutes = time.getMinutes()
+            var seconds = time.getSeconds()
+
+            var dayArr = ['日 ', '一 ', '二 ', '三 ', '四 ', '五 ', '六 ']
+
+            if (('' + minutes).length < 2) {
+                minutes = '0' + minutes
+            }
+            if (('' + seconds).length < 2) {
+                seconds = '0' + seconds
+            }
+
+
+            return `${year}年${mounth + 1}月${date}日星期${dayArr[day]}${hours}:${minutes}:${seconds}`
+        }
+
+        setInterval(function () {
+            document.querySelector('#now').innerText = showTime()
+        }, 1000)
+
+        // 导航收起展开
+        var listHeader = document.querySelectorAll('.header')
+        for (var i = 0; i < listHeader.length; i++) {
+            listHeader[i].onclick = function (e) {
+                e.preventDefault()
+                e.stopPropagation()
+
+                var tar = e.currentTarget.parentElement
+
+                if (tar.className.includes(' active')) {
+                    tar.className = tar.className.replace(' active', '')
+                } else {
+                    // 若点击的不是当前active的项目
+                    // var pre = document.querySelector('.active')
+                    // if (pre) {
+                    //     pre.className = pre.className.replace(' active', '')
+                    // }
+                    tar.className += ' active'
+                }
+            }
+        }
+    </script>
+  </body>
+</html>
